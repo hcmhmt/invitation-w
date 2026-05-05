@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animated background orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .orb--1 {
+      width: 400px;
+      height: 400px;
+      background: rgba(114, 88, 243, 0.6);
+      top: -100px;
+      left: -100px;
+      animation-delay: 0s;
+    }
+
+    .orb--2 {
+      width: 350px;
+      height: 350px;
+      background: rgba(59, 210, 246, 0.5);
+      bottom: -80px;
+      right: -80px;
+      animation-delay: -3s;
+    }
+
+    .orb--3 {
+      width: 250px;
+      height: 250px;
+      background: rgba(236, 72, 153, 0.4);
+      top: 50%;
+      left: 60%;
+      animation-delay: -5s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -20px) scale(1.05); }
+      66% { transform: translate(-20px, 20px) scale(0.95); }
+    }
+
+    /* Glass card */
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 60px 80px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+      animation: fadeUp 1s ease-out;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .greeting {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(167, 139, 250, 0.9);
+      margin-bottom: 12px;
+    }
+
+    .title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #e0e7ff, #a78bfa, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.6;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #a78bfa, #38bdf8);
+      border-radius: 3px;
+      margin: 24px auto;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 40px 28px;
+        margin: 20px;
+      }
+      .title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb--1"></div>
+  <div class="orb orb--2"></div>
+  <div class="orb orb--3"></div>
+
+  <div class="card">
+    <p class="greeting">Hello there</p>
+    <h1 class="title">Hi, Welcome</h1>
+    <div class="divider"></div>
+    <p class="subtitle">We're glad you're here. Make yourself at home.</p>
+  </div>
+
+</body>
+</html>
