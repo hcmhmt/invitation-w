@@ -14,16 +14,32 @@
 
 <body>
 
+  <!-- ===== SOL NAVİGASYON ===== -->
+  <nav id="side-nav">
+    <button id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-list">
+      <li><a href="#davet" data-section="davet"><span class="nav-dot"></span><span class="nav-label">Rüveyda&Mehmet</span></a></li>
+      <li><a href="#countdown" data-section="countdown"><span class="nav-dot"></span><span class="nav-label">Geri Sayım</span></a></li>
+      <li><a href="#story" data-section="story"><span class="nav-dot"></span><span class="nav-label">Hikayemiz</span></a></li>
+      <li><a href="#venue" data-section="venue"><span class="nav-dot"></span><span class="nav-label">Mekan</span></a></li>
+      <li><a href="#davetimiz" data-section="davetimiz"><span class="nav-dot"></span><span class="nav-label">Davetimiz</span></a></li>
+    </ul>
+  </nav>
+
   <!-- ===== HERO ===== -->
-  <section id="hero">
+  <section id="davet">
     <div class="hero-frame">
       <!-- CUSTOMIZE: Subtitle text -->
       <p class="hero-subtitle">Nikahımıza Davetlisiniz</p>
       <!-- CUSTOMIZE: Couple names -->
       <h1 class="hero-names">
-        Rüveyda
+        <span class="flower-decor left">✿</span>
+        <span class="name-left">Rüveyda</span>
         <span class="amp">&amp;</span>
-        Mehmet
+        <span class="name-right">Mehmet</span>
+        <span class="flower-decor right">✿</span>
       </h1>
       <!-- CUSTOMIZE: Wedding date display -->
       <p class="hero-date">06 · 09 · 2026 &nbsp;·&nbsp; İstanbul</p>
@@ -69,16 +85,6 @@
     </div>
   </section>
 
-  <!-- ===== WELCOME ===== -->
-  <section id="welcome">
-    <div class="container">
-      <div class="section-ornament"><span></span>
-        <div class="diamond"></div><span></span>
-      </div>
-      <p class="welcome-message">Bu bahtiyar günümüzde sizleri aramızda ağırlamaktan memnuniyet duyarız.</p>
-    </div>
-  </section>
-
   <!-- ===== VENUE ===== -->
   <section id="venue">
     <div class="container">
@@ -92,6 +98,7 @@
           <div class="venue-card">
             <div class="icon">🎉</div>
             <h3>Kına Gecesi</h3>
+            <p class="venue-date">03 Eylül 2026 · Saat 19:00</p>
             <p>Beylikdüzü Atatürk Öğretmen Evi<br>Beylikdüzü, İstanbul</p>
             <a href="https://maps.app.goo.gl/gYJATASqyq34CVU99" target="_blank" rel="noopener">Yol Tarifi Al →</a>
           </div>
@@ -104,6 +111,7 @@
           <div class="venue-card">
             <div class="icon">💍</div>
             <h3>Nikah Töreni</h3>
+            <p class="venue-date">06 Eylül 2026 · Saat 13:30</p>
             <p>Başakşehir Nikah Sarayı<br>Başakşehir, İstanbul</p>
             <a href="https://maps.app.goo.gl/tw7DVnBnpzLrcX898" target="_blank" rel="noopener">Yol Tarifi Al →</a>
           </div>
@@ -115,7 +123,15 @@
     </div>
   </section>
 
-
+  <!-- ===== WELCOME ===== -->
+  <section id="davetimiz">
+    <div class="container">
+      <div class="section-ornament"><span></span>
+        <div class="diamond"></div><span></span>
+      </div>
+      <p class="welcome-message">Bu bahtiyar günümüzde sizleri aramızda görmekten memnuniyet duyarız.</p>
+    </div>
+  </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
