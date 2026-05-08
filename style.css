@@ -238,7 +238,8 @@ h2 {
   font-size: 0.5em;
   color: var(--clr-accent);
   opacity: 0;
-  animation: flowerBloom 1.5s ease 1.2s forwards;
+  animation: flowerBloom 1.5s ease 1.2s forwards,
+              flowerSpin 6s linear 2.7s infinite;
 }
 
 .hero-names .flower-decor.left {
@@ -247,6 +248,11 @@ h2 {
 
 .hero-names .flower-decor.right {
   transform: rotate(15deg);
+}
+
+@keyframes flowerSpin {
+  from { transform: scale(1) rotate(0deg); }
+  to   { transform: scale(1) rotate(360deg); }
 }
 
 @keyframes flowerBloom {
